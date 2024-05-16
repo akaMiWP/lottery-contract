@@ -10,7 +10,7 @@ contract LotteryV1 {
         owner = msg.sender;
     }
 
-    function depositToThePool() public payable {
+    function depositToThePool() external payable {
         require(msg.value >= 100000000000000000);
         participators.push(msg.sender);
     }
