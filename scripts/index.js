@@ -10,7 +10,7 @@ async function main() {
     "0x5fbdb2315678afecb367f032d93f642f64180aa3"
   );
   const lotteryV1WithUserAsASigner = lotteryV1.connect(user);
-  const tx = await lotteryV1.depositToThePool({
+  const tx = await lotteryV1WithUserAsASigner.depositToThePool({
     value: ethers.parseUnits("1", "ether"),
   });
 
