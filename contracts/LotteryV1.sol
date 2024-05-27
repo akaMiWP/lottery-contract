@@ -11,7 +11,7 @@ contract LotteryV1 {
     }
 
     function depositToThePool() external payable {
-        require(msg.value >= 100000000000000000);
+        require(msg.value >= 1 ether);
         participators.push(msg.sender);
     }
 
